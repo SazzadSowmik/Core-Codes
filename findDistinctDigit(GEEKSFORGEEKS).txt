@@ -1,0 +1,21 @@
+bool Unique(int x){
+ 
+        int num = x;
+        bool visited[10] = {false};
+ 
+        while (num)
+        {
+            if (visited[num % 10])
+                break;
+ 
+            visited[num%10] = true;
+ 
+            num = num/10;
+        }
+        if (num == 0)
+            return true;
+        else {
+            return false;
+        }
+ 
+}
